@@ -40,7 +40,6 @@
         .hero h1 {
             font-size: 3.5em;
             margin-bottom: 10px;
-            color: #ffffff;
             letter-spacing: 1px;
         }
 
@@ -48,7 +47,6 @@
             font-size: 1.5em;
             font-weight: 300;
             margin-bottom: 30px;
-            color: #f1f8e9;
         }
 
         .hero button {
@@ -71,6 +69,7 @@
         .content {
             padding: 40px 20px;
             animation: fadeIn 1s ease-in-out;
+            display: none;
         }
 
         .container {
@@ -90,27 +89,6 @@
             color: #388e3c;
         }
 
-        select {
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         .site-header {
             background-color: #e8f5e9;
             padding: 30px 20px;
@@ -118,12 +96,6 @@
             text-align: center;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-        }
-
-        .site-header h2 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #2e7d32;
         }
 
         .nav-buttons {
@@ -141,7 +113,6 @@
             color: #1b5e20;
             border-radius: 12px;
             font-weight: bold;
-            font-size: 1em;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s;
         }
@@ -171,9 +142,26 @@
             font-size: 1.5em;
         }
 
-        .tappa ul {
-            margin-top: 10px;
-            padding-left: 20px;
+        .tappa-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .tappa-text {
+            flex: 1 1 60%;
+        }
+
+        .tappa-image {
+            flex: 1 1 35%;
+            text-align: right;
+        }
+
+        .tappa-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .quiz-container {
@@ -182,6 +170,11 @@
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -195,14 +188,14 @@
     </div>
 </div>
 
-<div class="content" id="mainContent" style="display: none;">
+<div class="content" id="mainContent">
     <header class="site-header">
         <h1>PROJECT WORK - PRODUZIONE DI BIOGAS</h1>
-        <br>
         <nav class="nav-buttons">
             <button class="nav-btn active" data-target="cavernago">LA NOSTRA VISITA</button>
             <button class="nav-btn" data-target="quiz">QUIZ</button>
             <button class="nav-btn" data-target="progetti">I NOSTRI PROGETTI</button>
+            <button class="nav-btn" data-target="laboratorio">LABORATORIO</button>
         </nav>
     </header>
 
@@ -210,153 +203,213 @@
         <div id="cavernago" class="section active">
             <h3>VISITA ALL’IMPIANTO DI PRODUZIONE DI BIOGAS DI CAVERNAGO</h3>
 
+            <!-- Tappa 01 -->
             <div class="tappa">
                 <h4>TAPPA 01 – Alla scoperta della struttura dell’impianto</h4>
-                <br>
-                <img src="img/foto1.png" alt="Descrizione immagine" style="max-width: 100%; border-radius: 10px;" />
-                <p>La nostra visita è iniziata con una panoramica generale dell’impianto di biogas di Cavernago, una realtà all’avanguardia nella produzione di energia rinnovabile a partire da materiale organico.</p>
-                <p>Abbiamo subito notato l’articolazione ordinata e funzionale della struttura, composta da:</p>
-                <ul>
-                    <li>4 digestori anaerobici, i veri protagonisti del processo di trasformazione della biomassa in biogas;</li>
-                    <li>1 grande vasca di raccolta, dove viene depositato il mais trinciato, in attesa della fase di conservazione;</li>
-                    <li>Silos di stoccaggio, utilizzati per aggiungere melassa alla biomassa, migliorandone la fermentazione e quindi la produzione di metano;</li>
-                    <li>Una tramoggia, ovvero un enorme imbuto metallico che serve per alimentare in modo costante e controllato i digestori con il materiale solido.</li>
-                </ul>
-                <p>Questa prima tappa ci ha permesso di visualizzare la "mappa" del processo e capire quanto sia importante ogni singolo componente dell’impianto per garantire una produzione efficiente e sicura di biogas.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>La nostra visita è iniziata con una panoramica generale dell’impianto …</p>
+                        <ul>
+                            <li>4 digestori anaerobici …</li>
+                            <li>1 grande vasca di raccolta …</li>
+                            <li>Silos di stoccaggio …</li>
+                            <li>Una tramoggia …</li>
+                        </ul>
+                        <p>Questa prima tappa ci ha permesso di visualizzare la “mappa” …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto1.png" alt="Struttura impianto Cavernago">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 02 -->
             <div class="tappa">
                 <h4>TAPPA 02 – La preparazione del materiale organico</h4>
-                <br>
-                <p>Abbiamo proseguito la visita osservando le trincee di stoccaggio, grandi vasche in cemento dove il mais trinciato viene accumulato. Qui, con l’ausilio di pesanti macchinari, la biomassa viene compattata accuratamente per eliminare l’aria e creare le condizioni ideali per la conservazione anaerobica.</p>
-                <p>Il materiale pressato viene poi coperto con teli in plastica, fissati con tubi zavorrati per proteggerlo da agenti atmosferici e impedire fermentazioni indesiderate. Quando arriva il momento di utilizzare il mais fermentato, pale meccaniche e ruspe lo prelevano e lo trasferiscono alla tramoggia, dove comincia il processo di alimentazione dei digestori.</p>
-                <p>È stato affascinante scoprire quanto questa fase sia delicata: una cattiva conservazione del materiale può compromettere l’intero processo di digestione anaerobica!</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>Abbiamo proseguito la visita osservando le trincee di stoccaggio …</p>
+                        <p>Il materiale pressato viene poi coperto con teli in plastica …</p>
+                        <p>È stato affascinante scoprire quanto questa fase …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto2.png" alt="Preparazione materiale organico">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 03 -->
             <div class="tappa">
                 <h4>TAPPA 03 – Tramoggia e digestori</h4>
-                <br>
-                <p>In questa tappa abbiamo approfondito il funzionamento della tramoggia, un sistema a imbuto che trasporta e dosa il materiale solido (come il mais o la FORSU) verso i digestori principali.</p>
-                <p>Abbiamo osservato le differenze tra:</p>
-                <ul>
-                    <li>Digestori principali: più produttivi, alimentati con biomassa ad alto contenuto di carbonio;</li>
-                    <li>Digestori secondari: meno produttivi, destinati a biomasse con minore potere energetico.</li>
-                </ul>
-                <p>Ogni digestore è alto 6 metri (3 interrati, 3 fuori terra) e ha un diametro di 12 metri. Alla sommità, un pallone mobile si gonfia con l’aumento del gas prodotto. In caso di eccessiva pressione, un camino di sicurezza entra in funzione per evitare rischi, rilasciando il gas in eccesso in modo controllato.</p>
-                <p>All’interno, delle serpentine riscaldanti mantengono la temperatura a circa 40°C, ideale per i batteri mesofili che trasformano la biomassa in biogas. Questo sistema è alimentato con acqua calda proveniente dalla sala pompe.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>In questa tappa abbiamo approfondito il funzionamento della tramoggia …</p>
+                        <ul>
+                            <li>Digestori principali …</li>
+                            <li>Digestori secondari …</li>
+                        </ul>
+                        <p>Ogni digestore è alto 6 metri …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto3a.png" alt="Tramoggia">
+                        <br><br>
+                        <img src="img/foto3b.png" alt="Digestori">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 04 -->
             <div class="tappa">
                 <h4>TAPPA 04 – Sala di Controllo e Quadro Elettrico</h4>
-                <br>
-                <p>La quarta tappa ci ha portati nel "cervello" dell’impianto: la sala di controllo.</p>
-                <p>Qui, grazie a un quadro elettrico avanzato, si monitora in tempo reale ogni parametro del processo: dalle temperature dei digestori alla pressione interna, fino ai flussi di gas e al funzionamento di pompe e valvole.</p>
-                <p>Un dato sorprendente: la sala consuma appena 0,3 kW, a fronte di una produzione totale dell’impianto di 3 MW (3000 kW). Un esempio eccellente di efficienza energetica e sostenibilità.</p>
-                <p>Abbiamo anche osservato un diagramma funzionale che rappresenta graficamente i collegamenti e i flussi tra le varie componenti, rendendo più chiara la complessità e l’efficacia dell’organizzazione interna.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>La quarta tappa ci ha portati nel “cervello” dell’impianto …</p>
+                        <p>Qui … si monitora in tempo reale …</p>
+                        <p>Un dato sorprendente: …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto4.png" alt="Sala di Controllo">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 05 -->
             <div class="tappa">
                 <h4>TAPPA 05 – La Sala Pompe</h4>
-                <br>
-                <p>La sala pompe rappresenta il centro nevralgico della movimentazione dei liquidi nell’impianto. Le pompe svolgono funzioni fondamentali per l’equilibrio del sistema:</p>
-                <ul>
-                    <li>Trasferimento della biomassa tra le diverse fasi (pre-digestore, post-digestore, stoccaggio, separatore);</li>
-                    <li>Gestione del riscaldamento: circolano acqua calda nelle serpentine dei digestori, regolandone la temperatura;</li>
-                    <li>Controllo e dosaggio dei flussi in ingresso, in base ai parametri di processo come pH e temperatura;</li>
-                    <li>Desolfazione biologica: un processo per eliminare l’acido solfidrico (H₂S) dal biogas, trasformandolo in zolfo elementare;</li>
-                    <li>Aspirazione del digestato per inviarlo alle vasche di stoccaggio;</li>
-                    <li>Aspirazione dalle vasche per reimmettere i substrati nel ciclo produttivo.</li>
-                </ul>
-                <p>Tutto questo contribuisce al perfetto funzionamento dell’impianto e all’ottimizzazione della produzione di biogas.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>La sala pompe rappresenta il centro nevralgico …</p>
+                        <ul>
+                            <li>Trasferimento della biomassa …</li>
+                            <li>Gestione del riscaldamento …</li>
+                            <li>Controllo e dosaggio …</li>
+                            <li>Desolfazione biologica …</li>
+                            <li>Aspirazione del digestato …</li>
+                            <li>Aspirazione dalle vasche …</li>
+                        </ul>
+                        <p>Tutto questo contribuisce …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto5.png" alt="Sala Pompe">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 06 -->
             <div class="tappa">
                 <h4>TAPPA 06 – Anatomia di un Digestore</h4>
-                <br>
-                <p>In questa tappa abbiamo approfondito la struttura tecnica di un digestore anaerobico, un sistema chiuso in cui avviene la trasformazione della biomassa in biogas e digestato.</p>
-                <p><strong>I 7 elementi fondamentali sono:</strong></p>
-                <ul>
-                    <li>Vasca di digestione: a tenuta stagna, isolata, in acciaio o cemento.</li>
-                    <li>Sistema di riscaldamento: mantiene la temperatura ideale per la digestione (mesofila o termofila).</li>
-                    <li>Sistema di agitazione: evita la formazione di croste e mantiene la biomassa omogenea.</li>
-                    <li>Copertura (gasometro): raccoglie il biogas prodotto.</li>
-                    <li>Sistema di alimentazione: tramite tramoggia, pompe o coclee.</li>
-                    <li>Sistema di scarico: rimuove il digestato verso le vasche di stoccaggio.</li>
-                    <li>Sistema di trattamento del biogas: rimuove impurità e consente l’uso del gas per cogenerazione o produzione di biometano.</li>
-                </ul>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>In questa tappa abbiamo approfondito …</p>
+                        <p><strong>I 7 elementi fondamentali sono:</strong></p>
+                        <ul>
+                            <li>Vasca di digestione …</li>
+                            <li>Sistema di riscaldamento …</li>
+                            <li>Sistema di agitazione …</li>
+                            <li>Copertura (gasometro) …</li>
+                            <li>Sistema di alimentazione …</li>
+                            <li>Sistema di scarico …</li>
+                            <li>Sistema di trattamento …</li>
+                        </ul>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto6.png" alt="Digestore - anatomia">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 07 & 08 -->
             <div class="tappa">
                 <h4>TAPPA 07 – Il Motore a Biogas: Energia Pulita</h4>
-                <br>
-                <p>Una delle tappe più affascinanti è stata la visita al motore a biogas, dove il gas prodotto dalla digestione anaerobica viene bruciato in modo controllato per produrre energia elettrica e termica.</p>
-                <p>Il motore funziona in modo simile a quello di un’auto a gas, ma utilizza metano rinnovabile, contribuendo a:</p>
-                <ul>
-                    <li>Ridurre le emissioni di gas serra;</li>
-                    <li>Riutilizzare rifiuti organici;</li>
-                    <li>Promuovere un’economia locale, senza bisogno di combustibili fossili.</li>
-                </ul>
-                <p>È un chiaro esempio di economia circolare: dallo scarto alla risorsa, con intelligenza e innovazione.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>Una delle tappe più affascinanti …</p>
+                        <ul>
+                            <li>Ridurre le emissioni di gas serra;</li>
+                            <li>Riutilizzare rifiuti organici;</li>
+                            <li>Promuovere un’economia locale …</li>
+                        </ul>
+                        <p>È un chiaro esempio di economia circolare …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto7.png" alt="Motore a biogas">
+                    </div>
+                </div>
             </div>
 
+            <!-- Tappa 08 (dewatering) -->
             <div class="tappa">
                 <h4>TAPPA 08 – Dewatering: la disidratazione del digestato</h4>
-                <br>
-                <p>Infine, abbiamo osservato il processo di dewatering, ovvero la separazione della parte solida e liquida del digestato, utile per ottimizzare il riutilizzo del materiale residuo.</p>
-                <p><strong> Perché è importante?</strong></p>
-                <ul>
-                    <li>Riduce i volumi da trasportare;</li>
-                    <li>Permette di ottenere compost solido e fertilizzanti liquidi;</li>
-                    <li>Facilita lo stoccaggio e il riutilizzo in agricoltura.</li>
-                </ul>
-                <p><strong>Come avviene?</strong></p>
-                <ul>
-                    <li>Pre-trattamento (eventuale aggiunta di flocculanti);</li>
-                    <li>Tecnologie di separazione:</li>
-                    <ul>
-                        <li>Screw press (vite pressa)</li>
-                        <li>Belt press (nastro filtrante)</li>
-                        <li>Centrifuga (più efficiente ma energivora)</li>
-                    </ul>
-                    <li>Gestione dei prodotti:</li>
-                    <ul>
-                        <li>Solido → compost, ammendante, essiccazione.</li>
-                        <li>Liquido → fertirrigazione o ulteriori trattamenti.</li>
-                    </ul>
-                </ul>
-                <p>Il dewatering è un esempio di come anche la “fine” del processo può generare valore.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>Infine, abbiamo osservato …</p>
+                        <p><strong>🔹 Perché è importante?</strong></p>
+                        <ul>
+                            <li>Riduce i volumi da trasportare;</li>
+                            <li>Permette di ottenere compost …</li>
+                            <li>Facilita lo stoccaggio …</li>
+                        </ul>
+                        <p><strong>🔹 Come avviene?</strong></p>
+                        <ul>
+                            <li>Pre-trattamento …</li>
+                            <li>Tecnologie di separazione:
+                                <ul>
+                                    <li>Screw press</li>
+                                    <li>Belt press</li>
+                                    <li>Centrifuga</li>
+                                </ul>
+                            </li>
+                            <li>Gestione dei prodotti …</li>
+                        </ul>
+                        <p>Il dewatering è un esempio …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto8.png" alt="Dewatering digestato">
+                    </div>
+                </div>
             </div>
 
+            <!-- Conclusione (opzionale immagine foto9.png) -->
             <div class="tappa">
                 <h4>CONCLUSIONE</h4>
-                <br>
-                <p>La visita all’impianto di Cavernago ci ha dimostrato che la sostenibilità non è solo un concetto astratto, ma una realtà concreta fatta di ingegno, tecnologia e collaborazione. Ogni passaggio, dalla raccolta del mais fino all’utilizzo del biogas, è parte di un ciclo virtuoso che trasforma gli scarti in energia, rispettando l’ambiente e valorizzando le risorse del territorio.</p>
+                <div class="tappa-content">
+                    <div class="tappa-text">
+                        <p>La visita all’impianto di Cavernago ci ha dimostrato …</p>
+                    </div>
+                    <div class="tappa-image">
+                        <img src="img/foto9.png" alt="Conclusione visita Cavernago">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="quiz" class="section" style="display: none;">
+        <!-- Quiz -->
+        <div id="quiz" class="section">
             <div class="quiz-container">
                 <h3>Quiz 1 – L'impiccato</h3>
-                <iframe
-                        src="https://learningapps.org/watch?v=pyogaskda25"
-                        style="width:100%; height:500px; border:0;"
-                        allowfullscreen>
-                </iframe>
+                <iframe src="https://learningapps.org/watch?v=pyogaskda25" style="width:100%; height:500px; border:0;" allowfullscreen></iframe>
             </div>
-
             <div class="quiz-container">
                 <h3>Quiz 2 – Cruciverba</h3>
-                <iframe
-                        src="https://learningapps.org/watch?v=pe2s76arj25"
-                        style="width:100%; height:500px; border:0;"
-                        allowfullscreen>
-                </iframe>
+                <iframe src="https://learningapps.org/watch?v=pe2s76arj25" style="width:100%; height:500px; border:0;" allowfullscreen></iframe>
             </div>
         </div>
 
-
-        <div id="progetti" class="section" style="display: none;">
+        <!-- Progetti -->
+        <div id="progetti" class="section">
             <p>Sezione progetti in costruzione.</p>
+        </div>
+
+        <!-- Laboratorio -->
+        <div id="laboratorio" class="section">
+            <h3>Laboratorio Interattivo</h3>
+            <p>Benvenuto nella sezione laboratorio! Qui potrai sperimentare …</p>
+            <ul>
+                <li>Simula il funzionamento di un impianto</li>
+                <li>Crea il tuo percorso decisionale</li>
+                <li>Progetta una centrale sostenibile</li>
+            </ul>
+            <p><em>Contenuti in arrivo…</em></p>
         </div>
     </div>
 </div>
@@ -366,43 +419,30 @@
         const startBtn = document.getElementById('startBtn');
         const intro = document.getElementById('intro');
         const mainContent = document.getElementById('mainContent');
-        const menu = document.getElementById('menu');
+        const navButtons = document.querySelectorAll('.nav-btn');
         const sections = document.querySelectorAll('.section');
 
         startBtn.addEventListener('click', () => {
-            intro.style.transition = 'opacity 0.5s ease';
             intro.style.opacity = 0;
             setTimeout(() => {
                 intro.style.display = 'none';
                 mainContent.style.display = 'block';
-                mainContent.style.opacity = 0;
-                mainContent.style.transition = 'opacity 0.5s ease';
-                requestAnimationFrame(() => {
-                    mainContent.style.opacity = 1;
-                });
             }, 500);
         });
 
-        const navButtons = document.querySelectorAll('.nav-btn');
-
         navButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const target = btn.getAttribute('data-target');
-
-                // Attiva sezione
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    section.style.display = 'none';
-                });
-                document.getElementById(target).classList.add('active');
-                document.getElementById(target).style.display = 'block';
-
-                // Aggiorna pulsanti
+                const tgt = btn.getAttribute('data-target');
+                sections.forEach(sec => { sec.classList.remove('active'); sec.style.display='none'; });
+                document.getElementById(tgt).classList.add('active');
+                document.getElementById(tgt).style.display='block';
                 navButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
             });
         });
     });
 </script>
+
 </body>
 </html>
+
