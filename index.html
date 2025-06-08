@@ -24,9 +24,21 @@
         .section.active { display:block; }
         .tappa { margin-bottom:40px; padding:25px; border-radius:15px; background:#f9fbe7; box-shadow:0 4px 12px rgba(0,0,0,0.05); font-size:1.2em; }
         .tappa h4 { margin-bottom:10px; font-size:1.5em; color:#33691e; }
-        .tappa-content { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+.tappa-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center; /* centra verticalmente */
+}
+
+.tappa-image {
+    flex: 1 1 35%;
+    display: flex;               /* necessario per allineamento */
+    align-items: center;         /* centra l'immagine verticalmente */
+    justify-content: center;     /* centra orizzontalmente se vuoi */
+}
+
         .tappa-text { flex:1 1 60%; }
-        .tappa-image { flex:1 1 35%; text-align:right; }
         .tappa-image img { max-width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
         .quiz-container { background:#e8f5e9; margin-top:30px; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
         @keyframes fadeIn { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
