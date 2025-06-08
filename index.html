@@ -5,177 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Work - Biogas</title>
     <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f0f4f2;
-            color: #2e2e2e;
-            line-height: 1.6;
-        }
-
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to bottom right, #a5d6a7, #2e7d32);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            overflow: hidden;
-        }
-
-        .hero-box {
-            text-align: center;
-            padding: 50px 40px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 25px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-box:hover {
-            transform: scale(1.02);
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .hero h2 {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        .hero button {
-            padding: 15px 40px;
-            font-size: 1.1em;
-            border: none;
-            background: white;
-            color: #2e7d32;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .hero button:hover {
-            background-color: #c8e6c9;
-            transform: scale(1.05);
-        }
-
-        .content {
-            padding: 40px 20px;
-            animation: fadeIn 1s ease-in-out;
-            display: none;
-        }
-
-        .container {
-            background: white;
-            padding: 30px;
-            max-width: 900px;
-            margin: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #2e7d32;
-        }
-
-        h3 {
-            color: #388e3c;
-        }
-
-        .site-header {
-            background-color: #e8f5e9;
-            padding: 30px 20px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        .nav-buttons {
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-            flex-wrap: wrap;
-            font-size: x-large;
-        }
-
-        .nav-btn {
-            padding: 12px 20px;
-            border: none;
-            background-color: #a5d6a7;
-            color: #1b5e20;
-            border-radius: 12px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        .nav-btn:hover {
-            background-color: #81c784;
-            transform: scale(1.05);
-        }
-
-        .nav-btn.active {
-            background-color: #388e3c;
-            color: white;
-        }
-
-        .tappa {
-            margin-bottom: 40px;
-            padding: 25px;
-            border-radius: 15px;
-            background-color: #f9fbe7;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            font-size: 1.2em;
-        }
-
-        .tappa h4 {
-            color: #33691e;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-
-        .tappa-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .tappa-text {
-            flex: 1 1 60%;
-        }
-
-        .tappa-image {
-            flex: 1 1 35%;
-            text-align: right;
-        }
-
-        .tappa-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .quiz-container {
-            background-color: #e8f5e9;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-top: 30px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f0f4f2; color: #2e2e2e; line-height: 1.6; }
+        .hero { height: 100vh; background: linear-gradient(to bottom right, #a5d6a7, #2e7d32); display: flex; justify-content: center; align-items: center; }
+        .hero-box { text-align: center; padding: 50px 40px; background: rgba(255,255,255,0.15); border-radius: 25px; backdrop-filter: blur(8px); box-shadow:0 8px 32px rgba(0,0,0,0.2); transition: transform .3s; }
+        .hero-box:hover { transform: scale(1.02); }
+        .hero h1 { font-size: 3.5em; margin-bottom:10px; color:#fff; letter-spacing:1px;}
+        .hero h2 { font-size:1.5em; font-weight:300; margin-bottom:30px; color:#f1f8e9;}
+        .hero button { padding:15px 40px; font-size:1.1em; background:#fff; color:#2e7d32; border:none; border-radius:30px; cursor:pointer; transition: .3s; }
+        .hero button:hover { background:#c8e6c9; transform:scale(1.05); }
+        .content { display:none; padding:40px 20px; animation:fadeIn 1s ease; }
+        .container { background:#fff; max-width:900px; margin:auto; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); }
+        .site-header { background:#e8f5e9; padding:30px 20px; border-radius:20px; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.1); margin-bottom:30px; }
+        .nav-buttons { display:flex; justify-content:space-around; gap:10px; flex-wrap:wrap; font-size:x-large; }
+        .nav-btn { padding:12px 20px; border:none; border-radius:12px; background:#a5d6a7; color:#1b5e20; font-weight:bold; cursor:pointer; transition:.3s; }
+        .nav-btn:hover { background:#81c784; transform:scale(1.05); }
+        .nav-btn.active { background:#388e3c; color:#fff; }
+        .section { display:none; }
+        .section.active { display:block; }
+        .tappa { margin-bottom:40px; padding:25px; border-radius:15px; background:#f9fbe7; box-shadow:0 4px 12px rgba(0,0,0,0.05); font-size:1.2em; }
+        .tappa h4 { margin-bottom:10px; font-size:1.5em; color:#33691e; }
+        .tappa-content { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+        .tappa-text { flex:1 1 60%; }
+        .tappa-image { flex:1 1 35%; text-align:right; }
+        .tappa-image img { max-width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+        .quiz-container { background:#e8f5e9; margin-top:30px; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+        @keyframes fadeIn { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
     </style>
 </head>
 <body>
@@ -200,6 +54,7 @@
     </header>
 
     <div class="container">
+        <!-- Sezione VISITA -->
         <div id="cavernago" class="section active">
             <h3>VISITA ALL’IMPIANTO DI PRODUZIONE DI BIOGAS DI CAVERNAGO</h3>
 
@@ -208,14 +63,14 @@
                 <h4>TAPPA 01 – Alla scoperta della struttura dell’impianto</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>La nostra visita è iniziata con una panoramica generale dell’impianto …</p>
+                        <p>La nostra visita è iniziata con una panoramica generale dell’impianto di biogas di Cavernago, una realtà all’avanguardia nella produzione di energia rinnovabile a partire da materiale organico.</p>
                         <ul>
-                            <li>4 digestori anaerobici …</li>
-                            <li>1 grande vasca di raccolta …</li>
-                            <li>Silos di stoccaggio …</li>
-                            <li>Una tramoggia …</li>
+                            <li>4 digestori anaerobici...</li>
+                            <li>1 grande vasca di raccolta...</li>
+                            <li>Silos di stoccaggio...</li>
+                            <li>Una tramoggia...</li>
                         </ul>
-                        <p>Questa prima tappa ci ha permesso di visualizzare la “mappa” …</p>
+                        <p>Questa prima tappa ci ha permesso di visualizzare la "mappa" del processo...</p>
                     </div>
                     <div class="tappa-image">
                         <img src="img/foto1.png" alt="Struttura impianto Cavernago">
@@ -228,9 +83,9 @@
                 <h4>TAPPA 02 – La preparazione del materiale organico</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>Abbiamo proseguito la visita osservando le trincee di stoccaggio …</p>
-                        <p>Il materiale pressato viene poi coperto con teli in plastica …</p>
-                        <p>È stato affascinante scoprire quanto questa fase …</p>
+                        <p>Abbiamo proseguito la visita osservando le trincee di stoccaggio...</p>
+                        <p>Il materiale pressato viene poi coperto con teli in plastica...</p>
+                        <p>È stato affascinante scoprire quanto questa fase sia delicata...</p>
                     </div>
                     <div class="tappa-image">
                         <img src="img/foto2.png" alt="Preparazione materiale organico">
@@ -243,16 +98,17 @@
                 <h4>TAPPA 03 – Tramoggia e digestori</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>In questa tappa abbiamo approfondito il funzionamento della tramoggia …</p>
+                        <p>In questa tappa abbiamo approfondito il funzionamento della tramoggia...</p>
                         <ul>
-                            <li>Digestori principali …</li>
-                            <li>Digestori secondari …</li>
+                            <li>Digestori principali...</li>
+                            <li>Digestori secondari...</li>
                         </ul>
-                        <p>Ogni digestore è alto 6 metri …</p>
+                        <p>Ogni digestore è alto 6 metri...</p>
                     </div>
                     <div class="tappa-image">
-                        <img src="img/foto3.png" alt="Tramoggia">
-                        <br>
+                        <img src="img/foto3a.png" alt="Tramoggia">
+                        <br><br>
+                        <img src="img/foto3b.png" alt="Digestori">
                     </div>
                 </div>
             </div>
@@ -262,9 +118,9 @@
                 <h4>TAPPA 04 – Sala di Controllo e Quadro Elettrico</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>La quarta tappa ci ha portati nel “cervello” dell’impianto …</p>
-                        <p>Qui … si monitora in tempo reale …</p>
-                        <p>Un dato sorprendente: …</p>
+                        <p>La quarta tappa ci ha portati nel "cervello" dell’impianto...</p>
+                        <p>Qui si monitora in tempo reale...</p>
+                        <p>Un dato sorprendente: la sala consuma appena 0,3 kW...</p>
                     </div>
                     <div class="tappa-image">
                         <img src="img/foto4.png" alt="Sala di Controllo">
@@ -277,19 +133,19 @@
                 <h4>TAPPA 05 – La Sala Pompe</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>La sala pompe rappresenta il centro nevralgico …</p>
+                        <p>La sala pompe rappresenta il centro nevralgico della movimentazione...</p>
                         <ul>
-                            <li>Trasferimento della biomassa …</li>
-                            <li>Gestione del riscaldamento …</li>
-                            <li>Controllo e dosaggio …</li>
-                            <li>Desolfazione biologica …</li>
-                            <li>Aspirazione del digestato …</li>
-                            <li>Aspirazione dalle vasche …</li>
+                            <li>Trasferimento della biomassa...</li>
+                            <li>Gestione del riscaldamento...</li>
+                            <li>Controllo e dosaggio...</li>
+                            <li>Desolfazione biologica...</li>
+                            <li>Aspirazione del digestato...</li>
+                            <li>Aspirazione dalle vasche...</li>
                         </ul>
-                        <p>Tutto questo contribuisce …</p>
                     </div>
                     <div class="tappa-image">
                         <img src="img/foto5a.png" alt="Sala Pompe">
+                        <br><br>
                         <img src="img/foto5b.png" alt="Sala Pompe">
                     </div>
                 </div>
@@ -300,36 +156,36 @@
                 <h4>TAPPA 06 – Anatomia di un Digestore</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>In questa tappa abbiamo approfondito …</p>
+                        <p>In questa tappa abbiamo approfondito la struttura tecnica...</p>
                         <p><strong>I 7 elementi fondamentali sono:</strong></p>
                         <ul>
-                            <li>Vasca di digestione …</li>
-                            <li>Sistema di riscaldamento …</li>
-                            <li>Sistema di agitazione …</li>
-                            <li>Copertura (gasometro) …</li>
-                            <li>Sistema di alimentazione …</li>
-                            <li>Sistema di scarico …</li>
-                            <li>Sistema di trattamento …</li>
+                            <li>Vasca di digestione...</li>
+                            <li>Sistema di riscaldamento...</li>
+                            <li>Sistema di agitazione...</li>
+                            <li>Copertura...</li>
+                            <li>Sistema di alimentazione...</li>
+                            <li>Sistema di scarico...</li>
+                            <li>Sistema di trattamento...</li>
                         </ul>
                     </div>
                     <div class="tappa-image">
-                        <img src="img/foto6.png" alt="Digestore - anatomia">
+                        <img src="img/foto6.png" alt="Anatomia digestore">
                     </div>
                 </div>
             </div>
 
-            <!-- Tappa 07 & 08 -->
+            <!-- Tappa 07 -->
             <div class="tappa">
                 <h4>TAPPA 07 – Il Motore a Biogas: Energia Pulita</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>Una delle tappe più affascinanti …</p>
+                        <p>Una delle tappe più affascinanti è stata la visita al motore a biogas...</p>
                         <ul>
                             <li>Ridurre le emissioni di gas serra;</li>
                             <li>Riutilizzare rifiuti organici;</li>
-                            <li>Promuovere un’economia locale …</li>
+                            <li>Promuovere un’economia locale...</li>
                         </ul>
-                        <p>È un chiaro esempio di economia circolare …</p>
+                        <p>È un chiaro esempio di economia circolare...</p>
                     </div>
                     <div class="tappa-image">
                         <img src="img/foto7.png" alt="Motore a biogas">
@@ -337,21 +193,21 @@
                 </div>
             </div>
 
-            <!-- Tappa 08 (dewatering) -->
+            <!-- Tappa 08 -->
             <div class="tappa">
                 <h4>TAPPA 08 – Dewatering: la disidratazione del digestato</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>Infine, abbiamo osservato …</p>
+                        <p>Infine, abbiamo osservato il processo di dewatering...</p>
                         <p><strong>🔹 Perché è importante?</strong></p>
                         <ul>
                             <li>Riduce i volumi da trasportare;</li>
-                            <li>Permette di ottenere compost …</li>
-                            <li>Facilita lo stoccaggio …</li>
+                            <li>Permette di ottenere compost solido;</li>
+                            <li>Facilita lo stoccaggio...</li>
                         </ul>
                         <p><strong>🔹 Come avviene?</strong></p>
                         <ul>
-                            <li>Pre-trattamento …</li>
+                            <li>Pre-trattamento...</li>
                             <li>Tecnologie di separazione:
                                 <ul>
                                     <li>Screw press</li>
@@ -359,28 +215,24 @@
                                     <li>Centrifuga</li>
                                 </ul>
                             </li>
-                            <li>Gestione dei prodotti …</li>
+                            <li>Gestione dei prodotti...</li>
                         </ul>
-                        <p>Il dewatering è un esempio …</p>
-                    </div>
-                    <div class="tappa-image">
-                        <img src="img/foto8.png" alt="Dewatering digestato">
                     </div>
                 </div>
             </div>
 
-            <!-- Conclusione (opzionale immagine foto9.png) -->
+            <!-- Conclusione -->
             <div class="tappa">
                 <h4>CONCLUSIONE</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
-                        <p>La visita all’impianto di Cavernago ci ha dimostrato …</p>
+                        <p>La visita all’impianto di Cavernago ci ha dimostrato che la sostenibilità non è solo un concetto astratto...</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Quiz -->
+        <!-- Sezione QUIZ -->
         <div id="quiz" class="section">
             <div class="quiz-container">
                 <h3>Quiz 1 – L'impiccato</h3>
@@ -392,19 +244,24 @@
             </div>
         </div>
 
-        <!-- Progetti -->
+        <!-- Sezione PROGETTI -->
         <div id="progetti" class="section">
-            <p>Sezione progetti in costruzione.</p>
-        </div>
+        <h3>I nostri progetti</h3>
+        <p>Visualizza il nostro documento direttamente qui sotto:</p>
+        <iframe src="img/report.pdf" width="100%" height="600px" style="border: none;">
+            Questo browser non supporta la visualizzazione PDF. Puoi <a href="img/report.pdf" target="_blank">scaricare il file qui</a>.
+        </iframe>
+    </div>
 
-        <!-- Laboratorio -->
+
+        <!-- Sezione LABORATORIO -->
         <div id="laboratorio" class="section">
             <h3>Laboratorio Interattivo</h3>
-            <p>Benvenuto nella sezione laboratorio! Qui potrai sperimentare …</p>
+            <p>Benvenuto nel laboratorio! Tra le attività previste:</p>
             <ul>
-                <li>Simula il funzionamento di un impianto</li>
-                <li>Crea il tuo percorso decisionale</li>
-                <li>Progetta una centrale sostenibile</li>
+                <li>🔧 Simulazione del funzionamento di un impianto biogas</li>
+                <li>📊 Creazione di un percorso interattivo decisionale</li>
+                <li>🌍 Progettazione di una centrale sostenibile</li>
             </ul>
             <p><em>Contenuti in arrivo…</em></p>
         </div>
@@ -415,31 +272,26 @@
     document.addEventListener('DOMContentLoaded', () => {
         const startBtn = document.getElementById('startBtn');
         const intro = document.getElementById('intro');
-        const mainContent = document.getElementById('mainContent');
+        const main = document.getElementById('mainContent');
         const navButtons = document.querySelectorAll('.nav-btn');
         const sections = document.querySelectorAll('.section');
 
         startBtn.addEventListener('click', () => {
             intro.style.opacity = 0;
-            setTimeout(() => {
-                intro.style.display = 'none';
-                mainContent.style.display = 'block';
-            }, 500);
+            setTimeout(() => { intro.style.display = 'none'; main.style.display = 'block'; }, 500);
         });
 
         navButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const tgt = btn.getAttribute('data-target');
-                sections.forEach(sec => { sec.classList.remove('active'); sec.style.display='none'; });
+                const tgt = btn.dataset.target;
+                sections.forEach(sec => { sec.classList.remove('active'); sec.style.display = 'none'; });
                 document.getElementById(tgt).classList.add('active');
-                document.getElementById(tgt).style.display='block';
+                document.getElementById(tgt).style.display = 'block';
                 navButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
             });
         });
     });
 </script>
-
 </body>
 </html>
-
