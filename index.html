@@ -40,6 +40,28 @@
 
         .tappa-text { flex:1 1 60%; }
         .tappa-image img { max-width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+        .tappa-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.tappa-no-align .tappa-content {
+    align-items: flex-start; /* disattiva l’allineamento verticale solo per tappa 03 */
+}
+
+.tappa-image {
+    flex: 1 1 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tappa-no-align .tappa-image {
+    align-items: flex-start; /* immagini in alto nella tappa 03 */
+}
+
         .quiz-container { background:#e8f5e9; margin-top:30px; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
         @keyframes fadeIn { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:translateY(0);} }
     </style>
@@ -107,7 +129,7 @@
             </div>
 
             <!-- Tappa 03 -->
-            <div class="tappa">
+            <div class="tappa tappa-no-align">
                 <h4>TAPPA 03 – Tramoggia e digestori</h4>
                 <div class="tappa-content">
                     <div class="tappa-text">
