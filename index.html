@@ -48,18 +48,12 @@
 }
 
 .tappa-no-align .tappa-content {
-    align-items: flex-start; /* disattiva l’allineamento verticale solo per tappa 03 */
+display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; 
 }
 
-.tappa-image {
-    flex: 1 1 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .tappa-no-align .tappa-image {
-    align-items: flex-start; /* immagini in alto nella tappa 03 */
+   flex:1 1 35%; text-align:right;
 }
 
         .quiz-container { background:#e8f5e9; margin-top:30px; padding:20px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
